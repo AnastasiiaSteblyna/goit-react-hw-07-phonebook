@@ -21,6 +21,4 @@ const ContactFilter = () => {
   );
 };
 
-// yohoho
-
 export default ContactFilter;
