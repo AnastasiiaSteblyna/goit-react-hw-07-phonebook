@@ -1,4 +1,4 @@
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from 'redux/selectors';
 import { useEffect } from 'react';
 
@@ -21,7 +21,7 @@ export const App = () => {
   return (
     <div className={css.container}>
       <ContactForm />
-      {contacts ? (
+      {contacts.length > 0 ? (
         <div>
           <ContactFilter />
           <ContactList />
