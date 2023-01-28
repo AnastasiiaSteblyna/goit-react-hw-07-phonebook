@@ -25,7 +25,7 @@ export const contactSlice = createSlice({
       state.isLoading = true;
     },
     [deleteContact.fulfilled]: (state, { payload }) => {
-      state.items = state.items.filter(({ id }) => id !== payload);
+      state.items = state.items.filter(({ id }) => id !== payload.id);
       state.isLoading = false;
     },
     [deleteContact.rejected]: (state, { payload }) => {
